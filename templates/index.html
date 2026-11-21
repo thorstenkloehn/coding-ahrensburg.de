@@ -1,0 +1,8 @@
+{% extends "base.html" %}
+{% block title %}{{ section.title }} – {{ config.title }}{% endblock %}
+{% block content %}
+<div class="p-5 mb-4 bg-body-tertiary rounded-3">
+  <h1 class="display-5 fw-bold">{{ section.title }}</h1>
+  <div class="fs-5">{{ section.content | safe }}</div>
+</div>
+{% endblock %}
