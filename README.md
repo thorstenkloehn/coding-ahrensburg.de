@@ -109,6 +109,9 @@ Die Skills liegen in `.claude/skills/<name>/SKILL.md` und sind nur in diesem Pro
 | `artikel-luecken` | Was dem Artikel **fehlt** und was genau dazu geschrieben werden soll (Stelle, Inhalt, Umfang) | Nein |
 | `inhalt-verbessern` | Verbesserungen für **vorhandenen** Text, jeweils mit Textvorschlag (vorher und nachher) | Nur nach ausdrücklicher Zustimmung |
 | `bild-alt-text` | Alt-Texte für Bilder prüfen und vorschlagen (Barrierefreiheit, Bildersuche) | Nur nach Rückfrage |
+| `code-erklaeren` | Code für Einsteiger erklären (Zweck, Ablauf, Zeile für Zeile, typische Fehler) | Nein |
+| `neue-seite` | Neue Seite unter `content/` mit Front Matter anlegen, auf Wunsch Menüeintrag | Legt Datei an, Menü nur auf Wunsch |
+| `veroeffentlichen` | Prüfung vor dem Push: `zola check`, Testbuild, Front Matter, Menü, Technik | Nein, Commit und Push nur nach Rückfrage |
 
 ### Die Skills im Einzelnen
 
@@ -147,16 +150,34 @@ Sucht Bilder in Markdown und Templates, liest den Kontext und bewertet jeden Alt
 
 Beispiel: `/bild-alt-text content/meine-seite.md`
 
+**`code-erklaeren`**
+Erklärt einen Code-Abschnitt in sechs Teilen: Worum es geht, Überblick, Block für Block mit dem „Warum“, Zusammenspiel, kleine Änderungen zum Ausprobieren und typische Fehler. Er erklärt nur, was der Code tatsächlich tut, kennzeichnet Unverifiziertes als Annahme und ändert den Code nicht ungefragt.
+
+Beispiel: `/code-erklaeren templates/base.html`
+
+**`neue-seite`**
+Legt `content/<pfad>.md` mit `title`, `description` und `path` und einem Platzhaltertext an. Den `path` leitet er aus dem Titel ab (kleingeschrieben, Bindestriche, Umlaute umgeschrieben). Das Menü in `zola.toml` ergänzt er nur auf Wunsch. Danach prüft er mit `zola check`. Bestehende Dateien überschreibt er nicht, den Artikeltext schreibst du selbst.
+
+Beispiel: `/neue-seite Zola-Templates verstehen`
+
+**`veroeffentlichen`**
+Die Prüfung vor dem Push: Stand mit `git status`, dann `zola check` und ein Testbuild in ein anderes Verzeichnis als `public/`. Er prüft das Front Matter geänderter Seiten, das Menü, `base_url`, `robots.txt` und `.gitignore` und weist auf Bilder ohne Alt-Text hin. Ergebnis: je Schritt `OK`, `Warnung` oder `Fehler` und ein Fazit „bereit“ oder „noch nicht“. Committen und Pushen nur nach deiner Zustimmung. Rechtschreibung und SEO der Texte prüft `text-pruefen`.
+
+Beispiel: `/veroeffentlichen`
+
 ### Welcher Skill wann?
 
 ```
+Neue Seite anlegen           → neue-seite
 Neuer Artikel geplant        → vorschlag-artikel
 Text halb geschrieben        → schreibvorschlaege
 Text fertig, was fehlt?      → artikel-luecken
 Formulierungen verbessern    → inhalt-verbessern
 Bilder einbinden             → bild-alt-text
+Code im Artikel erklären     → code-erklaeren
 Einzelnen Satz korrigieren   → satz-pruefen
-Vor der Veröffentlichung     → text-pruefen
+Text prüfen (Fehler, SEO)    → text-pruefen
+Vor dem Push                 → veroeffentlichen
 ```
 
 ### Eigene Skills hinzufügen
