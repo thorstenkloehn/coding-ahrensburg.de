@@ -201,6 +201,38 @@ Beurteilt, wie gut Einsteiger den Text verstehen: Satzlänge, Schachtelsätze, u
 
 Beispiel: `/lesbarkeit-pruefen content/meine-seite.md`
 
+### Tokenverbrauch der Skills (Schätzung)
+
+Die Werte sind **geschätzt**: Zeichenzahl geteilt durch 3,5 für deutschen Text, gerundet. Der echte Verbrauch weicht davon ab. Stand: November 2026.
+
+- **Dauerhaft:** Claude kennt in jeder Sitzung von jedem Skill nur Name und Beschreibung. Das kostet Tokens, auch wenn du den Skill nie aufrufst.
+- **Beim Aufruf:** Erst dann wird die ganze Anleitung (`SKILL.md`) geladen.
+- **Zusätzlich:** Was ein Skill beim Arbeiten liest oder ausgibt, kommt on top und hängt vom Text ab.
+
+| Skill | Dauerhaft | Beim Aufruf | Zusätzlich beim Arbeiten |
+|-------|----------:|------------:|--------------------------|
+| `satz-pruefen` | ca. 90 | ca. 510 | markierter Text |
+| `text-pruefen` | ca. 100 | ca. 1.920 | ganzer Text, Websuchen |
+| `vorschlag-artikel` | ca. 120 | ca. 780 | vorhandene Artikel unter `content/` |
+| `schreibvorschlaege` | ca. 120 | ca. 750 | der Text |
+| `artikel-luecken` | ca. 110 | ca. 710 | der Artikel, ggf. weitere Artikel |
+| `inhalt-verbessern` | ca. 120 | ca. 650 | der Text |
+| `bild-alt-text` | ca. 110 | ca. 900 | Texte und die Bilder selbst |
+| `code-erklaeren` | ca. 100 | ca. 750 | der Code |
+| `neue-seite` | ca. 100 | ca. 720 | `content/` und `zola.toml` |
+| `veroeffentlichen` | ca. 110 | ca. 780 | Ausgaben von `git` und `zola` |
+| `themen-vorschlaege` | ca. 115 | ca. 790 | **alle** Seiten unter `content/` |
+| `skill-vorschlaege` | ca. 100 | ca. 700 | **alle** Skills, README, Konfiguration, Commits |
+| `uebungen-erstellen` | ca. 100 | ca. 680 | der Artikel |
+| `fehlermeldung-erklaeren` | ca. 100 | ca. 850 | die Fehlermeldung, ggf. Dateien |
+| `artikel-aktualisieren` | ca. 105 | ca. 770 | alle geprüften Dateien, Websuchen |
+| `lesbarkeit-pruefen` | ca. 105 | ca. 815 | der Text |
+| **Summe aller 16** | **ca. 1.700** | **ca. 13.000** | |
+
+Die 1.700 Tokens fallen in jeder Sitzung an. Die 13.000 Tokens entstehen nur, wenn du **alle** Skills in einer Sitzung aufrufst. Ein einzelner Aufruf kostet meist unter 1.000 Tokens für die Anleitung. Teurer werden Skills, die viele Dateien lesen (`themen-vorschlaege`, `skill-vorschlaege`, `artikel-aktualisieren`) oder im Web suchen (`text-pruefen`, `artikel-aktualisieren`), vor allem wenn die Seite wächst.
+
+Zum Sparen kannst du die Beschreibungen in `SKILL.md` kürzen. Das senkt den dauerhaften Verbrauch.
+
 ### Welcher Skill wann?
 
 ```
