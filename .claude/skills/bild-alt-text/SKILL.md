@@ -1,6 +1,6 @@
 ---
 name: bild-alt-text
-description: Erstellt und prüft Alt-Texte für Bilder in deutschen Markdown-Seiten und Templates (barrierefrei und gut für Google-Bildersuche). Findet Bilder ohne oder mit schlechtem Alt-Text und schlägt passende Texte vor. Verwenden, wenn der Nutzer Alt-Texte für Bilder schreiben oder prüfen lassen will (z. B. "Alt-Text für dieses Bild", "prüfe die Bilder auf alt", "Bilder barrierefrei").
+description: Erstellt und prüft Alt-Texte für Bilder in Markdown und Templates (Barrierefreiheit, Bildersuche). Ändert Dateien nur nach Rückfrage. Verwenden bei „Alt-Text für dieses Bild“ oder „Bilder auf alt prüfen“.
 ---
 
 # Alt-Text für Bilder (Deutsch)

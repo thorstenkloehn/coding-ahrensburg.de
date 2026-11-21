@@ -1,6 +1,6 @@
 ---
 name: veroeffentlichen
-description: Prüft vor der Veröffentlichung, ob die Zola-Seite fehlerfrei baut und die Seiten vollständig sind (zola check und build, Front Matter, Menü, interne Links, robots.txt), und fasst das Ergebnis zusammen. Committet oder pusht nur nach Rückfrage. Verwenden, wenn der Nutzer die Seite vor dem Push oder Livegang prüfen will (z. B. "kann ich veröffentlichen", "Seite vor dem Push prüfen").
+description: Prüft vor dem Push, ob die Zola-Seite fehlerfrei baut (zola check, Build, Front Matter, Menü, robots.txt). Committet und pusht nur nach Rückfrage. Verwenden bei „kann ich veröffentlichen“ oder „vor dem Push prüfen“.
 ---
 
 # Vor der Veröffentlichung prüfen

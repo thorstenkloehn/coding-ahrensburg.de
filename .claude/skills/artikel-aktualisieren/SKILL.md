@@ -1,6 +1,6 @@
 ---
 name: artikel-aktualisieren
-description: Sucht in bestehenden Artikeln, in der README und in setup.md nach Veraltetem (Versionsnummern, Befehle, Links, Screenshots, Aussagen) und schlägt Aktualisierungen mit Quelle vor. Ändert Dateien nur nach Rückfrage. Verwenden, wenn der Nutzer alte Inhalte auf Aktualität prüfen will (z. B. "sind die Artikel noch aktuell", "Versionen prüfen", "Artikel aktualisieren").
+description: Sucht in Artikeln, README und setup.md nach Veraltetem (Versionen, Befehle, Links) und schlägt Korrekturen mit Quelle vor. Ändert Dateien nur nach Rückfrage. Verwenden bei „sind die Artikel noch aktuell“ oder „Versionen prüfen“.
 ---
 
 # Artikel aktualisieren (Deutsch)

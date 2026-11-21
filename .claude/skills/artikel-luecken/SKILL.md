@@ -1,6 +1,6 @@
 ---
 name: artikel-luecken
-description: Findet heraus, was einem deutschen Artikel noch fehlt, und sagt genau, was dazu geschrieben werden soll (Abschnitt, Inhalt, Umfang, Stelle im Text). Schreibt den Text nicht selbst und ändert nichts. Verwenden, wenn der Nutzer wissen will, was im Artikel fehlt oder was er noch ergänzen soll (z. B. "was fehlt im Artikel", "was muss ich noch schreiben", "Lücken im Text").
+description: Findet heraus, was einem Artikel fehlt, und sagt genau, was dazu geschrieben werden soll (Stelle, Inhalt, Umfang). Schreibt und ändert nichts. Verwenden bei „was fehlt im Artikel“ oder „Lücken im Text“.
 ---
 
 # Artikel-Lücken finden (Deutsch)

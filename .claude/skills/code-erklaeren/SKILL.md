@@ -1,6 +1,6 @@
 ---
 name: code-erklaeren
-description: Erklärt einen Code-Abschnitt auf Deutsch so, dass Einsteiger ihn verstehen und später selbst lesen und anpassen können (Zeile für Zeile, Zweck, Ablauf, typische Fehler). Verwenden, wenn der Nutzer Code für einen Artikel erklären lassen oder selbst verstehen will (z. B. "erkläre diesen Code", "was macht diese Zeile", "Code für Einsteiger erklären").
+description: Erklärt Code auf Deutsch für Einsteiger (Zweck, Ablauf, Zeile für Zeile, typische Fehler). Ändert den Code nicht. Verwenden bei „erkläre diesen Code“ oder „was macht diese Zeile“.
 ---
 
 # Code erklären (Deutsch)

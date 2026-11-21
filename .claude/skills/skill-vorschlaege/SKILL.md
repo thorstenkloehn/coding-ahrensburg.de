@@ -1,6 +1,6 @@
 ---
 name: skill-vorschlaege
-description: Schlägt vor, welche Skills dem Projekt noch fehlen, indem er vorhandene Skills, Inhalte und den Arbeitsablauf ansieht und Lücken benennt. Legt keine Skills an und ändert nichts. Verwenden, wenn der Nutzer wissen will, welche Skills noch sinnvoll wären (z. B. "welche Skills fehlen noch", "was für Skills brauche ich", "Vorschläge für neue Skills").
+description: Schlägt vor, welche Skills dem Projekt noch fehlen, anhand vorhandener Skills und Arbeitsablauf. Legt nichts an. Verwenden bei „welche Skills fehlen noch“ oder „Vorschläge für neue Skills“.
 ---
 
 # Skill-Vorschläge für das Projekt (Deutsch)

@@ -1,6 +1,6 @@
 ---
 name: themen-vorschlaege
-description: Schlägt vor, welche weiteren Artikel und Themen der gesamten Seite noch fehlen und womit es inhaltlich weitergehen soll (Themenübersicht, Reihenfolge, Suchintention). Schreibt keine Artikel und ändert nichts. Verwenden, wenn der Nutzer wissen will, welche Artikel als Nächstes sinnvoll sind (z. B. "welche Themen fehlen noch", "was soll ich als Nächstes schreiben", "Themenvorschläge für die Seite").
+description: Schlägt vor, welche weiteren Artikel der ganzen Seite fehlen und in welcher Reihenfolge sie sinnvoll sind. Schreibt und ändert nichts. Verwenden bei „welche Themen fehlen noch“ oder „was als Nächstes schreiben“.
 ---
 
 # Themenvorschläge für die ganze Seite (Deutsch)

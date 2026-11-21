@@ -211,27 +211,27 @@ Die Werte sind **geschätzt**: Zeichenzahl geteilt durch 3,5 für deutschen Text
 
 | Skill | Dauerhaft | Beim Aufruf | Zusätzlich beim Arbeiten |
 |-------|----------:|------------:|--------------------------|
-| `satz-pruefen` | ca. 90 | ca. 510 | markierter Text |
-| `text-pruefen` | ca. 100 | ca. 1.920 | ganzer Text, Websuchen |
-| `vorschlag-artikel` | ca. 120 | ca. 780 | vorhandene Artikel unter `content/` |
-| `schreibvorschlaege` | ca. 120 | ca. 750 | der Text |
-| `artikel-luecken` | ca. 110 | ca. 710 | der Artikel, ggf. weitere Artikel |
-| `inhalt-verbessern` | ca. 120 | ca. 650 | der Text |
-| `bild-alt-text` | ca. 110 | ca. 900 | Texte und die Bilder selbst |
-| `code-erklaeren` | ca. 100 | ca. 750 | der Code |
-| `neue-seite` | ca. 100 | ca. 720 | `content/` und `zola.toml` |
-| `veroeffentlichen` | ca. 110 | ca. 780 | Ausgaben von `git` und `zola` |
-| `themen-vorschlaege` | ca. 115 | ca. 790 | **alle** Seiten unter `content/` |
-| `skill-vorschlaege` | ca. 100 | ca. 700 | **alle** Skills, README, Konfiguration, Commits |
-| `uebungen-erstellen` | ca. 100 | ca. 680 | der Artikel |
-| `fehlermeldung-erklaeren` | ca. 100 | ca. 850 | die Fehlermeldung, ggf. Dateien |
-| `artikel-aktualisieren` | ca. 105 | ca. 770 | alle geprüften Dateien, Websuchen |
-| `lesbarkeit-pruefen` | ca. 105 | ca. 815 | der Text |
-| **Summe aller 16** | **ca. 1.700** | **ca. 13.000** | |
+| `satz-pruefen` | ca. 60 | ca. 480 | markierter Text |
+| `text-pruefen` | ca. 60 | ca. 1.880 | ganzer Text, Websuchen |
+| `vorschlag-artikel` | ca. 65 | ca. 720 | vorhandene Artikel unter `content/` |
+| `schreibvorschlaege` | ca. 60 | ca. 690 | der Text |
+| `artikel-luecken` | ca. 60 | ca. 660 | der Artikel, ggf. weitere Artikel |
+| `inhalt-verbessern` | ca. 60 | ca. 600 | der Text |
+| `bild-alt-text` | ca. 60 | ca. 850 | Texte und die Bilder selbst |
+| `code-erklaeren` | ca. 50 | ca. 700 | der Code |
+| `neue-seite` | ca. 55 | ca. 680 | `content/` und `zola.toml` |
+| `veroeffentlichen` | ca. 60 | ca. 740 | Ausgaben von `git` und `zola` |
+| `themen-vorschlaege` | ca. 60 | ca. 730 | **alle** Seiten unter `content/` |
+| `skill-vorschlaege` | ca. 55 | ca. 650 | **alle** Skills, README, Konfiguration, Commits |
+| `uebungen-erstellen` | ca. 50 | ca. 630 | der Artikel |
+| `fehlermeldung-erklaeren` | ca. 60 | ca. 810 | die Fehlermeldung, ggf. Dateien |
+| `artikel-aktualisieren` | ca. 65 | ca. 730 | alle geprüften Dateien, Websuchen |
+| `lesbarkeit-pruefen` | ca. 55 | ca. 770 | der Text |
+| **Summe aller 16** | **ca. 930** | **ca. 12.300** | |
 
-Die 1.700 Tokens fallen in jeder Sitzung an. Die 13.000 Tokens entstehen nur, wenn du **alle** Skills in einer Sitzung aufrufst. Ein einzelner Aufruf kostet meist unter 1.000 Tokens für die Anleitung. Teurer werden Skills, die viele Dateien lesen (`themen-vorschlaege`, `skill-vorschlaege`, `artikel-aktualisieren`) oder im Web suchen (`text-pruefen`, `artikel-aktualisieren`), vor allem wenn die Seite wächst.
+Die 930 Tokens fallen in jeder Sitzung an. Die 12.300 Tokens entstehen nur, wenn du **alle** Skills in einer Sitzung aufrufst. Ein einzelner Aufruf kostet meist unter 1.000 Tokens für die Anleitung. Teurer werden Skills, die viele Dateien lesen (`themen-vorschlaege`, `skill-vorschlaege`, `artikel-aktualisieren`) oder im Web suchen (`text-pruefen`, `artikel-aktualisieren`), vor allem wenn die Seite wächst.
 
-Zum Sparen kannst du die Beschreibungen in `SKILL.md` kürzen. Das senkt den dauerhaften Verbrauch.
+Die Beschreibungen in `SKILL.md` sind bewusst kurz gehalten (etwa 200 bis 260 Zeichen), um den dauerhaften Verbrauch zu senken. Beim Anlegen neuer Skills sollte die Beschreibung ebenfalls kurz bleiben, aber weiterhin sagen, wann der Skill zu verwenden ist, sonst findet Claude ihn nicht zuverlässig.
 
 ### Welcher Skill wann?
 

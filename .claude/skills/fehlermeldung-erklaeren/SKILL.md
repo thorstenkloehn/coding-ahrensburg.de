@@ -1,6 +1,6 @@
 ---
 name: fehlermeldung-erklaeren
-description: Erklärt eine Fehlermeldung (Zola, Cargo, Git, Claude Code, Shell u. a.) auf Deutsch für Einsteiger, nennt die wahrscheinliche Ursache und schlägt Schritte zur Lösung vor. Führt nichts selbst aus. Verwenden, wenn der Nutzer eine Fehlermeldung verstehen oder beheben will (z. B. "was bedeutet dieser Fehler", "warum geht das nicht", "Fehlermeldung erklären").
+description: Erklärt eine Fehlermeldung (Zola, Cargo, Git, Claude Code, Shell) für Einsteiger mit Ursache und Lösungsschritten. Führt nichts aus. Verwenden bei „was bedeutet dieser Fehler“ oder „warum geht das nicht“.
 ---
 
 # Fehlermeldung erklären (Deutsch)

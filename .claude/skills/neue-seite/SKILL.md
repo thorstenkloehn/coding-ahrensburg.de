@@ -1,6 +1,6 @@
 ---
 name: neue-seite
-description: Legt eine neue Seite unter content/ mit korrektem Zola-Front-Matter an (title, description, path) und trägt sie auf Wunsch ins Menü in zola.toml ein. Schreibt nur das Grundgerüst, keinen Artikeltext. Verwenden, wenn der Nutzer eine neue Seite oder einen neuen Artikel anlegen will (z. B. "neue Seite anlegen", "Datei für Artikel erstellen").
+description: Legt eine neue Seite unter content/ mit Zola-Front-Matter (title, description, path) an, auf Wunsch mit Menüeintrag in zola.toml. Schreibt keinen Artikeltext. Verwenden bei „neue Seite anlegen“.
 ---
 
 # Neue Seite anlegen

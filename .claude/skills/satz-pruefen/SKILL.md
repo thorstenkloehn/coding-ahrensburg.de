@@ -1,6 +1,6 @@
 ---
 name: satz-pruefen
-description: Prüft nur den markierten Satz oder die markierten Zeilen auf Rechtschreibung, Grammatik und Zeichensetzung, sonst nichts. Verwenden, wenn der Nutzer einen markierten Satz, Absatz oder Zeilenbereich prüfen lässt (z. B. "prüfe diesen Satz", "Zeile 12 bis 14"). Kein Urheberrecht, kein SEO, keine Stilkritik.
+description: Prüft nur markierte Sätze oder Zeilen auf Rechtschreibung, Grammatik und Zeichensetzung, sonst nichts. Verwenden bei „prüfe diesen Satz“ oder Zeilenangaben. Kein Urheberrecht, kein SEO, keine Stilkritik.
 ---
 
 # Satz prüfen (Deutsch)

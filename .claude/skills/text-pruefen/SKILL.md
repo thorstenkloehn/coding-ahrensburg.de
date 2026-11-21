@@ -1,6 +1,6 @@
 ---
 name: text-pruefen
-description: Prüft deutsche Texte auf Rechtschreibung, Grammatik und Zeichensetzung sowie auf mögliche Urheberrechtsverletzungen, Duplicate Content und Google-SEO, ohne Inhalt hinzuzudichten. Verwenden, wenn der Nutzer einen Text oder eine Datei (z. B. Markdown unter content/) prüfen, korrigieren, Korrektur lesen, auf fremde Inhalte oder auf SEO untersuchen lassen will.
+description: Prüft deutsche Texte oder Dateien (z. B. unter content/) auf Rechtschreibung, Grammatik, Zeichensetzung sowie mögliche Urheberrechtsverletzungen, Duplicate Content und Google-SEO, ohne Inhalt hinzuzudichten.
 ---
 
 # Text prüfen (Deutsch)

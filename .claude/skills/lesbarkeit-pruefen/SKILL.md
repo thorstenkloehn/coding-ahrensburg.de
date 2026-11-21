@@ -1,6 +1,6 @@
 ---
 name: lesbarkeit-pruefen
-description: Prüft einen deutschen Text darauf, wie gut Einsteiger ihn lesen und verstehen (Satzlänge, Schachtelsätze, unerklärte Fachwörter, Absatzlänge, Aufbau) und gibt Hinweise ohne Umformulierung. Ändert nichts. Verwenden, wenn der Nutzer wissen will, ob ein Text verständlich ist (z. B. "ist der Text verständlich", "Lesbarkeit prüfen", "zu kompliziert geschrieben?").
+description: Prüft, wie gut Einsteiger einen deutschen Text verstehen (Satzlänge, Fachwörter, Aufbau), nur mit Hinweisen. Ändert nichts. Verwenden bei „ist der Text verständlich“ oder „Lesbarkeit prüfen“.
 ---
 
 # Lesbarkeit prüfen (Deutsch)

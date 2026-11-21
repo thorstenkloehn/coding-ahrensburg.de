@@ -1,6 +1,6 @@
 ---
 name: inhalt-verbessern
-description: Liest einen bereits geschriebenen deutschen Text und zeigt konkrete Verbesserungsvorschläge für den Inhalt, jeweils mit einem Textvorschlag zum Vergleich (alt und neu). Ändert die Datei nur nach Rückfrage. Verwenden, wenn der Nutzer einen vorhandenen Text verbessern lassen will und Formulierungen sehen möchte (z. B. "verbessere den Inhalt", "zeig mir Textvorschläge", "wie könnte der Absatz besser lauten").
+description: Zeigt für einen vorhandenen deutschen Text Verbesserungen mit Textvorschlag (vorher und nachher). Ändert Dateien nur nach Zustimmung. Verwenden bei „verbessere den Inhalt“ oder „zeig mir Textvorschläge“.
 ---
 
 # Inhalt verbessern (Deutsch)

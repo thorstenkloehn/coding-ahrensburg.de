@@ -1,6 +1,6 @@
 ---
 name: schreibvorschlaege
-description: Macht nur Vorschläge, wie der Nutzer an einem deutschen Text weiterschreiben soll (Inhalt, Gliederung, Schreibstil, Suchintention), damit der Inhalt für Suchmaschinen möglichst hilfreich ist. Schreibt und ändert nichts selbst. Verwenden, wenn der Nutzer fragt, wie es weitergehen soll, was er ergänzen soll oder wie der Text besser für Google wird (z. B. "wie schreibe ich weiter", "Vorschläge für den Artikel").
+description: Gibt Tipps, wie man an einem begonnenen deutschen Text weiterschreibt (Inhalt, Gliederung, Stil, Suchintention). Schreibt und ändert nichts. Verwenden bei „wie schreibe ich weiter“ oder „Vorschläge für den Artikel“.
 ---
 
 # Schreibvorschläge (Deutsch)

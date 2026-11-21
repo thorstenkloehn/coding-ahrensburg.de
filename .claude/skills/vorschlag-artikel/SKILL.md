@@ -1,6 +1,6 @@
 ---
 name: vorschlag-artikel
-description: Schlägt zu einem Thema vor, wie ein Artikel aussehen soll und was in jedem Abschnitt stehen soll (Aufbau, Überschriften, Inhalte, Titel, Beschreibung), damit er für Leser und Suchmaschinen möglichst guten Inhalt bietet. Liefert nur den Plan, schreibt den Artikel nicht. Verwenden, wenn der Nutzer einen neuen Artikel plant (z. B. "wie soll der Artikel aussehen", "was soll im Artikel stehen", "Gliederung für Thema X").
+description: Plant einen neuen Artikel zu einem Thema mit Titel, Beschreibung, Überschriften und Inhalten je Abschnitt. Liefert nur den Plan, keinen Text. Verwenden bei „wie soll der Artikel aussehen“ oder „Gliederung für Thema X“.
 ---
 
 # Vorschlag für einen Artikel (Deutsch)

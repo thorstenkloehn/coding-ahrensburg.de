@@ -1,6 +1,6 @@
 ---
 name: uebungen-erstellen
-description: Schlägt zu einem Artikel oder Code-Abschnitt kleine Übungen und Kontrollfragen mit Lösungshinweisen vor, damit Leser das Gelernte selbst anwenden und prüfen können. Ändert keine Dateien. Verwenden, wenn der Nutzer Übungen, Aufgaben oder Kontrollfragen zu einem Artikel will (z. B. "Übungen zum Artikel", "Aufgaben für Einsteiger", "Kontrollfragen").
+description: Schlägt zu einem Artikel Übungen und Kontrollfragen mit Tipp und Lösung vor. Ändert Dateien nur nach Zustimmung. Verwenden bei „Übungen zum Artikel“ oder „Kontrollfragen“.
 ---
 
 # Übungen erstellen (Deutsch)
