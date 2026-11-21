@@ -112,6 +112,8 @@ Die Skills liegen in `.claude/skills/<name>/SKILL.md` und sind nur in diesem Pro
 | `code-erklaeren` | Code für Einsteiger erklären (Zweck, Ablauf, Zeile für Zeile, typische Fehler) | Nein |
 | `neue-seite` | Neue Seite unter `content/` mit Front Matter anlegen, auf Wunsch Menüeintrag | Legt Datei an, Menü nur auf Wunsch |
 | `veroeffentlichen` | Prüfung vor dem Push: `zola check`, Testbuild, Front Matter, Menü, Technik | Nein, Commit und Push nur nach Rückfrage |
+| `themen-vorschlaege` | Welche weiteren Artikel der **ganzen Seite** fehlen und in welcher Reihenfolge sie sinnvoll sind | Nein |
+| `skill-vorschlaege` | Welche **Skills** dem Projekt noch fehlen | Nein |
 
 ### Die Skills im Einzelnen
 
@@ -165,9 +167,20 @@ Die Prüfung vor dem Push: Stand mit `git status`, dann `zola check` und ein Tes
 
 Beispiel: `/veroeffentlichen`
 
+**`themen-vorschlaege`**
+Liest alle Seiten unter `content/`, das Menü und das Ziel der Startseite und schlägt 5 bis 8 neue Themen vor, nach Priorität sortiert. Je Thema: Arbeitstitel, Suchintention, Begründung, Aufwand und Verknüpfung mit vorhandenen Seiten, dazu eine empfohlene Schreibreihenfolge. Er nennt keine erfundenen Suchvolumen und schreibt keine Artikel. Im Gegensatz zu `artikel-luecken` (ein Artikel) betrachtet er die ganze Seite.
+
+Beispiel: `/themen-vorschlaege`
+
+**`skill-vorschlaege`**
+Liest die vorhandenen Skills, die README, die Konfiguration und die letzten Commits, geht den Ablauf von der Idee bis zur Pflege durch und nennt 3 bis 6 fehlende Skills mit Zweck, Beispielaufruf, Aufwand und Angabe, ob der Skill Dateien ändert. Er legt selbst keine Skills an.
+
+Beispiel: `/skill-vorschlaege`
+
 ### Welcher Skill wann?
 
 ```
+Welche Themen fehlen?        → themen-vorschlaege
 Neue Seite anlegen           → neue-seite
 Neuer Artikel geplant        → vorschlag-artikel
 Text halb geschrieben        → schreibvorschlaege
@@ -178,6 +191,7 @@ Code im Artikel erklären     → code-erklaeren
 Einzelnen Satz korrigieren   → satz-pruefen
 Text prüfen (Fehler, SEO)    → text-pruefen
 Vor dem Push                 → veroeffentlichen
+Welche Skills fehlen?        → skill-vorschlaege
 ```
 
 ### Eigene Skills hinzufügen
