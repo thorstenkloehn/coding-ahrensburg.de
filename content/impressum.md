@@ -1,6 +1,7 @@
 +++
 title = "Impressum"
 path = "impressum"
+description = "Impressum von coding-thorsten.de: Anbieterkennzeichnung, Kontaktdaten, Lizenzhinweise und KI-Transparenzhinweis."
 +++
 
 
@@ -28,4 +29,4 @@ Die Texte dieser Wissensdatenbank wurden ursprünglich mithilfe eines KI-Sprachm
 
 ### Datenschutz
 
-Informationen zur Verarbeitung personenbezogener Daten enthält die [Datenschutzerklärung](datenschutz.md).
+Informationen zur Verarbeitung personenbezogener Daten enthält die [Datenschutzerklärung](@/datenschutz.md).
