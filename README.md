@@ -114,6 +114,10 @@ Die Skills liegen in `.claude/skills/<name>/SKILL.md` und sind nur in diesem Pro
 | `veroeffentlichen` | Prüfung vor dem Push: `zola check`, Testbuild, Front Matter, Menü, Technik | Nein, Commit und Push nur nach Rückfrage |
 | `themen-vorschlaege` | Welche weiteren Artikel der **ganzen Seite** fehlen und in welcher Reihenfolge sie sinnvoll sind | Nein |
 | `skill-vorschlaege` | Welche **Skills** dem Projekt noch fehlen | Nein |
+| `uebungen-erstellen` | Übungen und Kontrollfragen mit Tipp und Lösung zu einem Artikel | Nur nach Zustimmung |
+| `fehlermeldung-erklaeren` | Fehlermeldung (Zola, Cargo, Git, Claude Code) erklären, Ursache und Lösungsschritte | Nein |
+| `artikel-aktualisieren` | Veraltetes (Versionen, Befehle, Links) in Artikeln, README und `setup.md` finden | Nur nach Rückfrage |
+| `lesbarkeit-pruefen` | Verständlichkeit für Einsteiger prüfen (Sätze, Fachwörter, Aufbau), nur Hinweise | Nein |
 
 ### Die Skills im Einzelnen
 
@@ -177,6 +181,26 @@ Liest die vorhandenen Skills, die README, die Konfiguration und die letzten Comm
 
 Beispiel: `/skill-vorschlaege`
 
+**`uebungen-erstellen`**
+Schlägt 3 bis 5 Aufgaben zu einem Artikel vor, vom Leichten zum Schweren: Kontrollfrage, Lesen, Ändern, Fehler finden und gegebenenfalls selbst bauen. Zu jeder Aufgabe gibt es erwartetes Ergebnis, Tipp und Lösung getrennt. Er übt nur, was im Artikel steht, und fügt nichts in die Datei ein, bevor du zustimmst.
+
+Beispiel: `/uebungen-erstellen content/meine-seite.md`
+
+**`fehlermeldung-erklaeren`**
+Erklärt eine vollständige Fehlermeldung in einfachen Worten, ordnet die wahrscheinlichste Ursache ein (belegt oder vermutet) und nennt nummerierte Lösungsschritte. Gefährliche Befehle wie `git reset --hard` oder `git push --force` schlägt er nicht als Standard vor. Er führt selbst nichts aus.
+
+Beispiel: `/fehlermeldung-erklaeren` und danach die Meldung einfügen
+
+**`artikel-aktualisieren`**
+Sucht Versionsnummern, Befehle, Links und zeitabhängige Aussagen und gleicht sie mit offiziellen Quellen ab. Jeder Fund bekommt `OK`, `Veraltet`, `Unsicher` oder `Nicht prüfbar`, mit Quelle und Abrufdatum. Was nicht geprüft werden kann, meldet er als solches, statt zu raten. Änderungen erst nach deiner Zustimmung.
+
+Beispiel: `/artikel-aktualisieren README.md setup.md`
+
+**`lesbarkeit-pruefen`**
+Beurteilt, wie gut Einsteiger den Text verstehen: Satzlänge, Schachtelsätze, unerklärte Fachwörter, Absatzlänge, roter Faden, vage Aussagen und Anrede. Er gibt höchstens 8 Hinweise und schreibt nichts um. Formulierungsvorschläge liefert danach `inhalt-verbessern`.
+
+Beispiel: `/lesbarkeit-pruefen content/meine-seite.md`
+
 ### Welcher Skill wann?
 
 ```
@@ -188,6 +212,10 @@ Text fertig, was fehlt?      → artikel-luecken
 Formulierungen verbessern    → inhalt-verbessern
 Bilder einbinden             → bild-alt-text
 Code im Artikel erklären     → code-erklaeren
+Übungen zum Artikel          → uebungen-erstellen
+Ist der Text verständlich?   → lesbarkeit-pruefen
+Fehlermeldung verstehen      → fehlermeldung-erklaeren
+Sind die Inhalte aktuell?    → artikel-aktualisieren
 Einzelnen Satz korrigieren   → satz-pruefen
 Text prüfen (Fehler, SEO)    → text-pruefen
 Vor dem Push                 → veroeffentlichen
