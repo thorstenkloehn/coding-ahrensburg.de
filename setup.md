@@ -28,7 +28,7 @@ cargo install mdbook
 mdbook --version
 ```
 
-Hinweis (Stand: November 2026): `cargo install mdbook` installiert die neueste Version, derzeit 0.5.x. Auf diesem Rechner ist noch mdBook 0.4.52 installiert. Zwischen den Versionen können sich Konfiguration und Verhalten ändern, das habe ich nicht geprüft.
+Hinweis (Stand: November 2026): `cargo install mdbook` installiert die neueste Version, derzeit 0.5.x. Ein Update einer vorhandenen Installation geht mit `cargo install --locked mdbook`, `install.sh` überspringt mdBook, wenn es schon da ist. Zwischen 0.4 und 0.5 können sich Konfiguration und Verhalten ändern, Bücher mit alter Konfiguration also nach dem Update prüfen.
 
 ```bash
 mdbook init mein-buch   # neues Buch anlegen
@@ -68,5 +68,5 @@ Dieses Verzeichnis ist eine Zola-Seite:
 
 | Tool   | Status |
 |--------|--------|
-| mdBook | installiert (v0.4.52) |
+| mdBook | installiert (v0.5.4) |
 | Zola   | installiert (v0.23.6) |
