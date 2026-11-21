@@ -1,1 +1,12 @@
+# Zola-Build
 public/
+
+# Node
+node_modules/
+
+# Claude Code (lokal)
+.claude/settings.local.json
+
+# Betriebssystem
+.DS_Store
+Thumbs.db
