@@ -51,10 +51,10 @@ zola --version
 
 Wer nur die Seite bauen will, braucht nur Zola. Alternativen zu Cargo:
 
-- `sudo snap install zola --edge`
+- `sudo snap install zola --edge` (liefert derzeit nur Zola 0.22.1 und ist damit älter als die getestete Version)
 - ein fertiges Binary von den [GitHub-Releases](https://github.com/getzola/zola/releases)
 
-Mehr dazu steht in [`setup.md`](setup.md). Zuletzt getestet mit Zola 0.23.6.
+Mehr dazu steht in [`setup.md`](setup.md). Zuletzt getestet mit Zola 0.23.6 (Stand: November 2026). `install.sh` installiert mdBook über Cargo in der neuesten Version, derzeit 0.5.x.
 
 ## Seite lokal ansehen und bauen
 

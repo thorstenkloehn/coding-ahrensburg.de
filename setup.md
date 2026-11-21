@@ -28,6 +28,8 @@ cargo install mdbook
 mdbook --version
 ```
 
+Hinweis (Stand: November 2026): `cargo install mdbook` installiert die neueste Version, derzeit 0.5.x. Auf diesem Rechner ist noch mdBook 0.4.52 installiert. Zwischen den Versionen können sich Konfiguration und Verhalten ändern, das habe ich nicht geprüft.
+
 ```bash
 mdbook init mein-buch   # neues Buch anlegen
 mdbook serve --open     # lokaler Server mit Live-Reload
@@ -46,6 +48,8 @@ zola --version
 Alternativen: `sudo snap install zola --edge` oder ein fertiges Binary von den
 [GitHub-Releases](https://github.com/getzola/zola/releases).
 
+Hinweis (Stand: November 2026): Der Snap liefert derzeit nur im Kanal `edge` die Version 0.22.1, das ist älter als die hier getestete Version 0.23.6. Stable und Candidate sind leer. Für die aktuelle Version ist ein Binary von den GitHub-Releases oder die Installation über Cargo besser.
+
 ```bash
 zola serve   # lokaler Server mit Live-Reload (http://127.0.0.1:1111)
 zola build   # statische Seite nach public/ bauen
@@ -58,7 +62,7 @@ Dieses Verzeichnis ist eine Zola-Seite:
 - `zola.toml`: Konfiguration (vor dem Livegang `base_url` auf die echte Domain setzen)
 - `content/_index.md`: Inhalt der Startseite
 - `templates/base.html`, `templates/index.html`: Templates
-- `static/bootstrap/`: Bootstrap 5.3.9 (CSS und JS-Bundle), lokal eingebunden
+- `static/bootstrap/`: Bootstrap 5.3.9 (CSS und JS-Bundle), lokal eingebunden (Stand: November 2026, aktuelle Version)
 
 ## Aktueller Stand auf diesem Rechner
 
