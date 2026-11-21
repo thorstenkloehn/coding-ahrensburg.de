@@ -108,6 +108,7 @@ Die Skills liegen in `.claude/skills/<name>/SKILL.md` und sind nur in diesem Pro
 | `schreibvorschlaege` | Tipps, wie du an einem Text **weiterschreibst** (Inhalt, Gliederung, Stil, Suchintention), ohne eigene Formulierungen | Nein |
 | `artikel-luecken` | Was dem Artikel **fehlt** und was genau dazu geschrieben werden soll (Stelle, Inhalt, Umfang) | Nein |
 | `inhalt-verbessern` | Verbesserungen für **vorhandenen** Text, jeweils mit Textvorschlag (vorher und nachher) | Nur nach ausdrücklicher Zustimmung |
+| `bild-alt-text` | Alt-Texte für Bilder prüfen und vorschlagen (Barrierefreiheit, Bildersuche) | Nur nach Rückfrage |
 
 ### Die Skills im Einzelnen
 
@@ -141,6 +142,11 @@ Zeigt zu jedem Vorschlag das Problem, die Stelle vorher, einen verbesserten Text
 
 Beispiel: `Verbessere den Inhalt von content/meine-seite.md und zeig mir Textvorschläge`
 
+**`bild-alt-text`**
+Sucht Bilder in Markdown und Templates, liest den Kontext und bewertet jeden Alt-Text mit `OK`, `Verbessern` oder `Fehlt`. Die Vorschläge sind kurz (höchstens etwa 125 Zeichen), beginnen nicht mit „Bild von“ und beschreiben bei Screenshots die Kernaussage. Dekorative Bilder bekommen `alt=""`, Linkbilder beschreiben das Ziel. Er erfindet keine Details. Zusätzlich weist er auf Dateinamen, `width` und `height` sowie unklare Lizenzen hin.
+
+Beispiel: `/bild-alt-text content/meine-seite.md`
+
 ### Welcher Skill wann?
 
 ```
@@ -148,6 +154,7 @@ Neuer Artikel geplant        → vorschlag-artikel
 Text halb geschrieben        → schreibvorschlaege
 Text fertig, was fehlt?      → artikel-luecken
 Formulierungen verbessern    → inhalt-verbessern
+Bilder einbinden             → bild-alt-text
 Einzelnen Satz korrigieren   → satz-pruefen
 Vor der Veröffentlichung     → text-pruefen
 ```
