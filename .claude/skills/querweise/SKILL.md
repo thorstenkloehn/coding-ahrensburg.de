@@ -40,3 +40,15 @@ Eine Liste, nach Wichtigkeit sortiert. Je Vorschlag:
 Dazu getrennt: bestehende Links mit Befund (`OK`, `Verbessern`, `Defekt`). Wenn kein Link nötig ist, das klar sagen.
 
 Antworte auf Deutsch, knapp und ohne Floskeln.
+
+## Anzeige auf der Seite
+
+Die freigegebenen Links stehen gesammelt am Ende des Artikels, nicht verstreut im Text. Dafür einen Abschnitt `## Weiterführende Links` ans Dateiende setzen: eine Aufzählung, je Eintrag Linktext und ein kurzer Satz, was der Link ergänzt. Bei Artikeln mit Fußabschnitten (z. B. Hinweise) davor einfügen, wenn es inhaltlich passt. Erst nach Zustimmung schreiben.
+
+Beispiel mit Wikipedia (URL am 23.11.2026 geprüft, HTTP 200):
+
+```markdown
+## Weiterführende Links
+
+- [Markdown auf Wikipedia](https://de.wikipedia.org/wiki/Markdown): Erklärt den Begriff Markdown für Einsteiger.
+```

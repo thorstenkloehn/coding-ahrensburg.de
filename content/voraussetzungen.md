@@ -107,3 +107,11 @@ Ich nehme [PostgreSQL](https://www.postgresql.org/download/linux/ubuntu/), weil 
 
 Leider habe ich keine Ahnung, wie das geht.
 
+
+## Weiterführende Links
+
+- [WSL 2 installieren](https://learn.microsoft.com/en-us/windows/wsl/install): Anleitung von Microsoft für Windows mit Ubuntu.
+- [Installation von .NET unter Ubuntu](https://learn.microsoft.com/en-us/dotnet/core/install/linux-ubuntu-install): Offizielle Anleitung zu .NET.
+- [Rust installieren](https://rust-lang.org/tools/install/): Offizielle Seite zur Installation von Rust.
+- [Go herunterladen](https://go.dev/dl/): Offizielle Downloadseite von Go.
+- [PostgreSQL unter Ubuntu](https://www.postgresql.org/download/linux/ubuntu/): Offizielle Anleitung zu PostgreSQL.
