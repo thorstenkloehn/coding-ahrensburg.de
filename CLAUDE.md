@@ -1,4 +1,4 @@
-# Projekt: coding-thorsten.de
+# Projekt: coding-ahrensburg.de
 
 Statische Zola-Seite (Deutsch) mit Bootstrap. Ziel: Mit Claude Code programmieren lernen und den Code verstehen.
 

@@ -1,7 +1,7 @@
-title = "coding-thorsten.de"
+title = "coding-ahrensburg.de"
 
 # The URL the site will be built for
-base_url = "https://coding-thorsten.de"
+base_url = "https://coding-ahrensburg.de"
 
 # Whether to automatically compile all Sass files in the sass directory
 compile_sass = true

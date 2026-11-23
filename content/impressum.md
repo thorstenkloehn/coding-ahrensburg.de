@@ -1,7 +1,7 @@
 +++
 title = "Impressum"
 path = "impressum"
-description = "Impressum von coding-thorsten.de: Anbieterkennzeichnung, Kontaktdaten, Lizenzhinweise und KI-Transparenzhinweis."
+description = "Impressum von coding-ahrensburg.de: Anbieterkennzeichnung, Kontaktdaten, Lizenzhinweise und KI-Transparenzhinweis."
 +++
 
 

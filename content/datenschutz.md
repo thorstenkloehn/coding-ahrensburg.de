@@ -1,7 +1,7 @@
 +++
 title = "Datenschutzerklärung"
 path = "datenschutz"
-description = "Datenschutzerklärung von coding-thorsten.de: Hosting über GitHub Pages, keine Cookies und kein Tracking, Ihre Rechte nach DSGVO."
+description = "Datenschutzerklärung von coding-ahrensburg.de: Hosting über GitHub Pages, keine Cookies und kein Tracking, Ihre Rechte nach DSGVO."
 +++
 
 Verantwortliche Stelle im Sinne der Datenschutzgesetze, insbesondere der EU-Datenschutzgrundverordnung (DSGVO), ist:

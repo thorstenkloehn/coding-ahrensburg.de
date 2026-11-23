@@ -16,7 +16,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "ver": "gh-pages -d public --nojekyll --cname coding-thorsten.de --no-history"
+    "ver": "gh-pages -d public --nojekyll --cname coding-ahrensburg.de --no-history"
   },
   "dependencies": {
     "gh-pages": "^6.3.0"

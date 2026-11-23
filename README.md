@@ -1,4 +1,4 @@
-# coding-thorsten.de
+# coding-ahrensburg.de
 
 Persönliche Wissensseite rund um Programmieren und Webentwicklung. Hier lernen wir, mit Claude Code zu programmieren und den entstehenden Code zu verstehen.
 
@@ -64,7 +64,7 @@ zola build   # baut die statische Seite nach public/
 zola check   # prüft Konfiguration und interne Links
 ```
 
-Vor dem Livegang muss `base_url` in `zola.toml` auf die echte Domain zeigen (aktuell `https://coding-thorsten.de`).
+Vor dem Livegang muss `base_url` in `zola.toml` auf die echte Domain zeigen (aktuell `https://coding-ahrensburg.de`).
 
 ## Neue Seite anlegen
 
