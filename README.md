@@ -118,6 +118,7 @@ Die Skills liegen in `.claude/skills/<name>/SKILL.md` und sind nur in diesem Pro
 | `fehlermeldung-erklaeren` | Fehlermeldung (Zola, Cargo, Git, Claude Code) erklären, Ursache und Lösungsschritte | Nein |
 | `artikel-aktualisieren` | Veraltetes (Versionen, Befehle, Links) in Artikeln, README und `setup.md` finden | Nur nach Rückfrage |
 | `lesbarkeit-pruefen` | Verständlichkeit für Einsteiger prüfen (Sätze, Fachwörter, Aufbau), nur Hinweise | Nein |
+| `querweise` | Hochwertige externe Links auf seriöse Quellen für einen Artikel vorschlagen, vorhandene Links prüfen | Nur nach Rückfrage |
 
 ### Die Skills im Einzelnen
 
@@ -201,6 +202,11 @@ Beurteilt, wie gut Einsteiger den Text verstehen: Satzlänge, Schachtelsätze, u
 
 Beispiel: `/lesbarkeit-pruefen content/meine-seite.md`
 
+**`querweise`**
+Sucht im Artikel Stellen, an denen ein externer Link eine Aussage belegt oder echten Mehrwert bietet, und schlägt dafür seriöse Quellen vor (offizielle Dokumentation, Behörden, Hochschulen, Fachmedien). Er arbeitet sparsam (Richtwert: 2 bis 5 externe Links pro Artikel), verlinkt nie auf Spam oder unsichere Seiten und prüft jede URL, statt sie zu erfinden. Normale redaktionelle Links bleiben ohne `nofollow`, `sponsored` und `ugc` sind nur für Werbung und Nutzerinhalte gedacht. Vorhandene externe Links prüft er ebenfalls. Änderungen erst nach deiner Zustimmung. Ein besseres Ranking kann er nicht garantieren.
+
+Beispiel: `/querweise content/voraussetzungen.md`
+
 ### Tokenverbrauch der Skills (Schätzung)
 
 Die Werte sind **geschätzt**: Zeichenzahl geteilt durch 3,5 für deutschen Text, gerundet. Der echte Verbrauch weicht davon ab. Stand: November 2026.
@@ -227,9 +233,10 @@ Die Werte sind **geschätzt**: Zeichenzahl geteilt durch 3,5 für deutschen Text
 | `fehlermeldung-erklaeren` | ca. 60 | ca. 810 | die Fehlermeldung, ggf. Dateien |
 | `artikel-aktualisieren` | ca. 65 | ca. 730 | alle geprüften Dateien, Websuchen |
 | `lesbarkeit-pruefen` | ca. 55 | ca. 770 | der Text |
-| **Summe aller 16** | **ca. 930** | **ca. 12.300** | |
+| `querweise` | ca. 65 | ca. 910 | der Artikel, Websuchen und Abrufe der Quellen |
+| **Summe aller 17** | **ca. 1.000** | **ca. 13.200** | |
 
-Die 930 Tokens fallen in jeder Sitzung an. Die 12.300 Tokens entstehen nur, wenn du **alle** Skills in einer Sitzung aufrufst. Ein einzelner Aufruf kostet meist unter 1.000 Tokens für die Anleitung. Teurer werden Skills, die viele Dateien lesen (`themen-vorschlaege`, `skill-vorschlaege`, `artikel-aktualisieren`) oder im Web suchen (`text-pruefen`, `artikel-aktualisieren`), vor allem wenn die Seite wächst.
+Die 1.000 Tokens fallen in jeder Sitzung an. Die 13.200 Tokens entstehen nur, wenn du **alle** Skills in einer Sitzung aufrufst. Ein einzelner Aufruf kostet meist unter 1.000 Tokens für die Anleitung. Teurer werden Skills, die viele Dateien lesen (`themen-vorschlaege`, `skill-vorschlaege`, `artikel-aktualisieren`) oder im Web suchen (`text-pruefen`, `artikel-aktualisieren`, `querweise`), vor allem wenn die Seite wächst.
 
 Die Beschreibungen in `SKILL.md` sind bewusst kurz gehalten (etwa 200 bis 260 Zeichen), um den dauerhaften Verbrauch zu senken. Beim Anlegen neuer Skills sollte die Beschreibung ebenfalls kurz bleiben, aber weiterhin sagen, wann der Skill zu verwenden ist, sonst findet Claude ihn nicht zuverlässig.
 
@@ -248,6 +255,7 @@ Code im Artikel erklären     → code-erklaeren
 Ist der Text verständlich?   → lesbarkeit-pruefen
 Fehlermeldung verstehen      → fehlermeldung-erklaeren
 Sind die Inhalte aktuell?    → artikel-aktualisieren
+Quellen verlinken            → querweise
 Einzelnen Satz korrigieren   → satz-pruefen
 Text prüfen (Fehler, SEO)    → text-pruefen
 Vor dem Push                 → veroeffentlichen
