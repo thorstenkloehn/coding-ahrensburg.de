@@ -20,5 +20,6 @@ menu = [
     { name = "Impressum", url = "/impressum" },
     { name = "Datenschutzerklärung", url = "/datenschutz"},
     { name = "Voraussetzungen", url ="/voraussetzungen"},
+    { name = "Server Installieren", url = "/server" },
 ]
 # Put all your custom variables here
