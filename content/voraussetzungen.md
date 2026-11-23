@@ -55,7 +55,7 @@ sudo apt install openjdk-26-jdk-headless
 Geben Sie Folgendes im Terminal ein (siehe auch [Installation von .NET unter Ubuntu](https://learn.microsoft.com/en-us/dotnet/core/install/linux-ubuntu-install)):
 ``` 
 sudo apt-get update
-sudo apt-get install -y dotnet-sdk-11.0
+sudo apt-get install -y dotnet-sdk-10.0
 dotnet tool install --global dotnet-ef
 dotnet tool install --global dotnet-aspnet-codegenerator
 dotnet tool install -g Microsoft.Web.LibraryManager.Cli
