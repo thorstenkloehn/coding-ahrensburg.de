@@ -28,8 +28,8 @@ Die Seite ist eine statische [Zola](https://www.getzola.org)-Seite mit [Bootstra
 ### Schnell: alles mit einem Skript
 
 ```bash
-git clone https://github.com/thorstenkloehn/coding-thorstende.git
-cd coding-thorstende
+git clone https://github.com/thorstenkloehn/coding-ahrensburg.de.git
+cd coding-ahrensburg.de
 ./install.sh
 ```
 
@@ -92,7 +92,7 @@ Die Skills liegen in `.claude/skills/<name>/SKILL.md` und sind nur in diesem Pro
 2. Im Projektordner starten:
 
    ```bash
-   cd coding-thorstende
+   cd coding-ahrensburg.de
    claude
    ```
 

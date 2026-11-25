@@ -1,14 +1,14 @@
 {
-  "name": "coding-thorstende",
+  "name": "coding-ahrensburg.de",
   "version": "1.0.0",
   "description": "Persönliche Wissensseite rund um Programmieren und Webentwicklung. Hier lernen wir, mit Claude Code zu programmieren und den entstehenden Code zu verstehen.",
-  "homepage": "https://github.com/thorstenkloehn/coding-thorstende#readme",
+  "homepage": "https://github.com/thorstenkloehn/coding-ahrensburg.de#readme",
   "bugs": {
-    "url": "https://github.com/thorstenkloehn/coding-thorstende/issues"
+    "url": "https://github.com/thorstenkloehn/coding-ahrensburg.de/issues"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/thorstenkloehn/coding-thorstende.git"
+    "url": "git+https://github.com/thorstenkloehn/coding-ahrensburg.de.git"
   },
   "license": "ISC",
   "author": "",
