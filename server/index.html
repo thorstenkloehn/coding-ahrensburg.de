@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Server – coding-ahrensburg.de</title>
+  
+  
+  <meta name="description" content="Produktserver Einrichten ">
+  <link rel="canonical" href="https://coding-ahrensburg.de/server/">
+  <link rel="stylesheet" href="https://coding-ahrensburg.de/bootstrap/bootstrap.min.css">
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg bg-body-tertiary border-bottom">
+    <div class="container">
+      <a class="navbar-brand" href="https://coding-ahrensburg.de">coding-ahrensburg.de</a>
+      <ul class="navbar-nav ms-auto flex-row gap-3">
+        
+        <li class="nav-item"><a class="nav-link" href="https://coding-ahrensburg.de">Start</a></li>
+        
+        <li class="nav-item"><a class="nav-link" href="https://coding-ahrensburg.de/impressum">Impressum</a></li>
+        
+        <li class="nav-item"><a class="nav-link" href="https://coding-ahrensburg.de/datenschutz">Datenschutzerklärung</a></li>
+        
+        <li class="nav-item"><a class="nav-link" href="https://coding-ahrensburg.de/voraussetzungen">Voraussetzungen</a></li>
+        
+        <li class="nav-item"><a class="nav-link" href="https://coding-ahrensburg.de/server">Server Installieren</a></li>
+        
+      </ul>
+    </div>
+  </nav>
+  <main class="container py-5">
+<h1>Server</h1>
+<h2 id="produktserver-einrichten">Produktserver einrichten</h2>
+<p>Ich benutze gern Ubuntu Server, weil ich ihn besser kenne. Wir müssen erst den Ubuntu Server aktualisieren. Wir starten auf dem Rechner das Terminalfenster und geben Folgendes ein: Das ist nur Code.</p>
+<pre class="giallo" style="color: #CDD6F4; background-color: #1E1E2E;" ><code data-lang="plain"></code></pre>
+<p>Jetzt öffnet sich dann ein externer Rechner. Geben Sie Folgendes ein:</p>
+<pre class="giallo" style="color: #CDD6F4; background-color: #1E1E2E;" ><code data-lang="plain"><span class="giallo-l"><span>apt-get update</span></span>
+<span class="giallo-l"><span>apt-get upgrade</span></span></code></pre><h2 id="jetzt-benutze-ich-nur-zwei-laufumgebungen">Jetzt benutze ich nur zwei Laufumgebungen</h2>
+<p>Weil die auch noch 20 Jahre ohne Probleme. Auch noch Abwärtskompatibilität. Hier sind und versprechen meine Favoriten:</p>
+<ul>
+<li>Java</li>
+<li>C#
+Andere brauchen keine Laufumgebung. Dass die Versprechen einhalten. Dieses brauche ich nicht Server installieren. Weil sie Binär Laufen</li>
+<li>C</li>
+<li>Go</li>
+<li>Rust: leider sind Bibliotheken weder Webframeworks noch Reifegrad genug und Bibliotheken.</li>
+<li>C++</li>
+</ul>
+<h3 id="java">Java</h3>
+<pre class="giallo" style="color: #CDD6F4; background-color: #1E1E2E;" ><code data-lang="plain"><span class="giallo-l"><span># Aktualisiert die Paketquellen</span></span>
+<span class="giallo-l"><span>sudo apt update</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span># Installiert eine aktuelle, schlanke Java-Laufzeitumgebung ohne grafische Komponenten</span></span>
+<span class="giallo-l"><span>sudo apt install openjdk-26-jre-headless</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span># Überprüft die installierte Java-Version</span></span>
+<span class="giallo-l"><span>java -version</span></span>
+<span class="giallo-l"><span>``` # Aktualisiert die Paketquellen</span></span>
+<span class="giallo-l"><span>sudo apt update</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span># Installiert eine aktuelle, schlanke Java-Laufzeitumgebung ohne grafische Komponenten</span></span>
+<span class="giallo-l"><span>sudo apt install openjdk-26-jre-headless</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span># Überprüft die installierte Java-Version</span></span>
+<span class="giallo-l"><span>java -version</span></span></code></pre><h3 id="dotnet">Dotnet</h3>
+<pre class="giallo" style="color: #CDD6F4; background-color: #1E1E2E;" ><code data-lang="plain"><span class="giallo-l"><span>sudo apt-get update &amp;&amp; sudo apt-get install -y aspnetcore-runtime-10.0</span></span>
+<span class="giallo-l"></span></code></pre><h2 id="webserver">Webserver</h2>
+<ul>
+<li>nginx</li>
+</ul>
+<h2 id="datenbank">Datenbank</h2>
+<ul>
+<li>PostgreSQL</li>
+</ul>
+<h2 id="weiterfuhrende-links">Weiterführende Links</h2>
+<ul>
+<li><a rel="external" href="https://ubuntu.com/server/docs/how-to/software/package-management/">Ubuntu Server: Pakete installieren und verwalten</a>: Erklärt <code>apt update</code> und <code>apt upgrade</code>.</li>
+<li><a rel="external" href="https://learn.microsoft.com/de-de/dotnet/core/install/linux-ubuntu-install">.NET auf Ubuntu installieren (Microsoft Learn)</a>: Zeigt die Installation der .NET-Laufzeit.</li>
+<li><a rel="external" href="https://openjdk.org/install/">OpenJDK: Download und Installation</a>: Offizielle Seite zu OpenJDK.</li>
+</ul>
+
+</main>
+  <script src="https://coding-ahrensburg.de/bootstrap/bootstrap.bundle.min.js"></script>
+</body>
+</html>

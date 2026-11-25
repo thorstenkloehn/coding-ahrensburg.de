@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Voraussetzungen: Ubuntu 26.10 einrichten – coding-ahrensburg.de</title>
+  
+  
+  <meta name="description" content="Ubuntu 26.10 einrichten: Programmiersprachen, PostgreSQL, Editoren und KI-Tools für dieses Projekt installieren.">
+  <link rel="canonical" href="https://coding-ahrensburg.de/voraussetzungen/">
+  <link rel="stylesheet" href="https://coding-ahrensburg.de/bootstrap/bootstrap.min.css">
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg bg-body-tertiary border-bottom">
+    <div class="container">
+      <a class="navbar-brand" href="https://coding-ahrensburg.de">coding-ahrensburg.de</a>
+      <ul class="navbar-nav ms-auto flex-row gap-3">
+        
+        <li class="nav-item"><a class="nav-link" href="https://coding-ahrensburg.de">Start</a></li>
+        
+        <li class="nav-item"><a class="nav-link" href="https://coding-ahrensburg.de/impressum">Impressum</a></li>
+        
+        <li class="nav-item"><a class="nav-link" href="https://coding-ahrensburg.de/datenschutz">Datenschutzerklärung</a></li>
+        
+        <li class="nav-item"><a class="nav-link" href="https://coding-ahrensburg.de/voraussetzungen">Voraussetzungen</a></li>
+        
+        <li class="nav-item"><a class="nav-link" href="https://coding-ahrensburg.de/server">Server Installieren</a></li>
+        
+      </ul>
+    </div>
+  </nav>
+  <main class="container py-5">
+<h1>Voraussetzungen: Ubuntu 26.10 einrichten</h1>
+<p>Für dieses Projekt brauchen Sie einen Rechner mit Ubuntu 26.10. Unter Windows geht das auch mit <a rel="external" href="https://learn.microsoft.com/en-us/windows/wsl/install">WSL 2</a> und Ubuntu 26.10.</p>
+<p>Sie haben zwei Möglichkeiten:</p>
+<ul>
+<li>Ubuntu 26.10 direkt auf Ihrem Rechner</li>
+<li>Windows mit WSL 2 und Ubuntu 26.10</li>
+</ul>
+<h2 id="ubuntu-26-10-direkt-auf-ihrem-rechner">Ubuntu 26.10 direkt auf Ihrem Rechner</h2>
+<p>Starten Sie das Terminal auf dem Ubuntu-Rechner. Geben Sie Folgendes ein, um den Rechner zu aktualisieren:</p>
+<pre class="giallo" style="color: #CDD6F4; background-color: #1E1E2E;" ><code data-lang="plain"><span class="giallo-l"><span>sudo apt-get update</span></span>
+<span class="giallo-l"><span>sudo apt-get upgrade</span></span>
+<span class="giallo-l"><span>sudo apt install libsecret-1-0 libsecret-tools libsecret-1-dev libglib2.0-dev</span></span>
+<span class="giallo-l"><span>sudo ubuntu-drivers install</span></span></code></pre><h3 id="interpretierte-sprachen">Interpretierte Sprachen</h3>
+<p>Ein Interpreter führt den Programmcode direkt aus.</p>
+<h4 id="python">Python</h4>
+<p>Geben Sie Folgendes im Terminal ein:</p>
+<pre class="giallo" style="color: #CDD6F4; background-color: #1E1E2E;" ><code data-lang="plain"><span class="giallo-l"><span>sudo apt install python3 python3-pip python3-venv python-is-python3</span></span>
+<span class="giallo-l"></span></code></pre><h4 id="node-js">Node.js</h4>
+<p>Geben Sie Folgendes im Terminal ein:</p>
+<pre class="giallo" style="color: #CDD6F4; background-color: #1E1E2E;" ><code data-lang="plain"><span class="giallo-l"><span>sudo apt install curl</span></span>
+<span class="giallo-l"><span># nvm herunterladen und installieren:</span></span>
+<span class="giallo-l"><span>curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.41.0/install.sh | bash</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span># nvm laden, ohne die Shell neu zu starten:</span></span>
+<span class="giallo-l"><span>\. &quot;$HOME/.nvm/nvm.sh&quot;</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span># Node.js herunterladen und installieren:</span></span>
+<span class="giallo-l"><span>nvm install 26</span></span></code></pre><h3 id="bytecode-sprachen">Bytecode-Sprachen</h3>
+<p>Der Compiler übersetzt den Programmcode in Bytecode. Eine Laufzeitumgebung (bei Java die JVM, bei .NET die CLR) führt ihn aus.</p>
+<h4 id="java-mit-entwickler-kit">Java mit Entwickler-Kit</h4>
+<p>Geben Sie Folgendes im Terminal ein:</p>
+<pre class="giallo" style="color: #CDD6F4; background-color: #1E1E2E;" ><code data-lang="plain"><span class="giallo-l"><span>sudo apt install openjdk-26-jdk-headless</span></span>
+<span class="giallo-l"></span></code></pre><h4 id="net-mit-entwickler-kit">.NET mit Entwickler-Kit</h4>
+<p>Geben Sie Folgendes im Terminal ein (siehe auch <a rel="external" href="https://learn.microsoft.com/en-us/dotnet/core/install/linux-ubuntu-install">Installation von .NET unter Ubuntu</a>):</p>
+<pre class="giallo" style="color: #CDD6F4; background-color: #1E1E2E;" ><code data-lang="plain"><span class="giallo-l"><span>sudo apt-get update</span></span>
+<span class="giallo-l"><span>sudo apt-get install -y dotnet-sdk-10.0</span></span>
+<span class="giallo-l"><span>dotnet tool install --global dotnet-ef</span></span>
+<span class="giallo-l"><span>dotnet tool install --global dotnet-aspnet-codegenerator</span></span>
+<span class="giallo-l"><span>dotnet tool install -g Microsoft.Web.LibraryManager.Cli</span></span>
+<span class="giallo-l"><span>echo &#39;export PATH=$HOME/.dotnet/tools:$PATH&#39; &gt;&gt; ~/.bashrc</span></span>
+<span class="giallo-l"><span>source ~/.bashrc </span></span></code></pre><h3 id="kompilierte-sprachen">Kompilierte Sprachen</h3>
+<p>Ein Compiler übersetzt den Programmcode in Binärcode, der ohne Laufzeitumgebung läuft.</p>
+<h4 id="c-und-c">C und C++</h4>
+<p>Das Metapaket build-essential installiert grundlegende Werkzeuge zum Übersetzen von Programmen, zum Beispiel den C- und C++-Compiler (gcc und g++) sowie make. Geben Sie Folgendes im Terminal ein:</p>
+<pre class="giallo" style="color: #CDD6F4; background-color: #1E1E2E;" ><code data-lang="plain"><span class="giallo-l"><span>sudo apt install build-essential</span></span>
+<span class="giallo-l"><span>sudo apt-get install cmake</span></span>
+<span class="giallo-l"><span>sudo apt-get install gdb</span></span></code></pre><h4 id="rust">Rust</h4>
+<p>Siehe auch: <a rel="external" href="https://rust-lang.org/tools/install/">Rust installieren</a>.</p>
+<pre class="giallo" style="color: #CDD6F4; background-color: #1E1E2E;" ><code data-lang="plain"><span class="giallo-l"><span>curl --proto &#39;=https&#39; --tlsv1.2 -sSf https://sh.rustup.rs | sh</span></span>
+<span class="giallo-l"></span></code></pre><h4 id="go">Go</h4>
+<p>Geben Sie Folgendes im Terminal ein (siehe auch <a rel="external" href="https://go.dev/dl/">Go herunterladen</a>):</p>
+<pre class="giallo" style="color: #CDD6F4; background-color: #1E1E2E;" ><code data-lang="plain"><span class="giallo-l"><span>cd $HOME</span></span>
+<span class="giallo-l"><span>sudo rm -rf /usr/local/go</span></span>
+<span class="giallo-l"><span>wget https://go.dev/dl/go1.27.4.linux-amd64.tar.gz</span></span>
+<span class="giallo-l"><span>sudo tar -C /usr/local -xzf go1.27.4.linux-amd64.tar.gz</span></span>
+<span class="giallo-l"><span>echo &#39;export PATH=$PATH:/usr/local/go/bin&#39; &gt;&gt; ~/.bashrc</span></span>
+<span class="giallo-l"><span>echo &#39;export GOPATH=$HOME/go&#39; &gt;&gt; ~/.bashrc</span></span>
+<span class="giallo-l"><span>echo &#39;export PATH=$PATH:$GOPATH/bin&#39; &gt;&gt; ~/.bashrc</span></span>
+<span class="giallo-l"><span>source ~/.bashrc</span></span></code></pre><h2 id="daten-speichern">Daten speichern</h2>
+<p>Das Programm soll Daten langfristig speichern. Wenn das Programm beendet ist, sind sie nicht mehr da.</p>
+<h3 id="relationale-datenbanken">Relationale Datenbanken</h3>
+<p>Eine relationale Datenbank speichert Daten in Tabellen, die man später abrufen, suchen und abfragen kann.
+Ich nehme <a rel="external" href="https://www.postgresql.org/download/linux/ubuntu/">PostgreSQL</a>, weil die Software Open Source ist und es auch viele Erweiterungen gibt. Geben Sie Folgendes im Terminal ein:</p>
+<pre class="giallo" style="color: #CDD6F4; background-color: #1E1E2E;" ><code data-lang="plain"><span class="giallo-l"><span># Import the repository signing key:</span></span>
+<span class="giallo-l"><span>sudo apt install curl ca-certificates</span></span>
+<span class="giallo-l"><span>sudo install -d /usr/share/postgresql-common/pgdg</span></span>
+<span class="giallo-l"><span>sudo curl -o /usr/share/postgresql-common/pgdg/apt.postgresql.org.asc --fail https://www.postgresql.org/media/keys/ACCC4CF8.asc</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span># Create the repository configuration file:</span></span>
+<span class="giallo-l"><span>. /etc/os-release</span></span>
+<span class="giallo-l"><span>sudo sh -c &quot;echo &#39;deb [signed-by=/usr/share/postgresql-common/pgdg/apt.postgresql.org.asc] https://apt.postgresql.org/pub/repos/apt $VERSION_CODENAME-pgdg main&#39; &gt; /etc/apt/sources.list.d/pgdg.list&quot;</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span># Update the package lists:</span></span>
+<span class="giallo-l"><span>sudo apt update</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span># PostgreSQL installieren</span></span>
+<span class="giallo-l"><span>sudo apt install postgresql-18</span></span>
+<span class="giallo-l"></span>
+<span class="giallo-l"><span># PostGIS Erweiterung installieren</span></span>
+<span class="giallo-l"><span>sudo apt-get install postgis postgresql-18-postgis-3 postgresql-18</span></span>
+<span class="giallo-l"><span>sudo -u postgres -i</span></span>
+<span class="giallo-l"><span>createuser thorsten</span></span>
+<span class="giallo-l"><span>createdb -E UTF8 -O thorsten thorsten</span></span>
+<span class="giallo-l"><span>psql -d thorsten -c &quot;CREATE EXTENSION postgis;&quot;</span></span>
+<span class="giallo-l"><span>psql -d thorsten -c &quot;CREATE EXTENSION hstore;&quot;</span></span>
+<span class="giallo-l"><span>psql -d thorsten -c &quot;ALTER TABLE geometry_columns OWNER TO thorsten;&quot;</span></span>
+<span class="giallo-l"><span>psql -d thorsten -c &quot;ALTER TABLE spatial_ref_sys OWNER TO thorsten;&quot;</span></span>
+<span class="giallo-l"><span>psql -d thorsten -c &quot;\password thorsten&quot;</span></span>
+<span class="giallo-l"><span>psql -c &quot;ALTER USER thorsten CREATEDB;&quot;</span></span>
+<span class="giallo-l"><span>exit</span></span>
+<span class="giallo-l"><span>cd $HOME</span></span>
+<span class="giallo-l"><span>wget https://download.geofabrik.de/europe/germany/schleswig-holstein-latest.osm.pbf</span></span>
+<span class="giallo-l"><span>sudo apt-get install osmosis osm2pgsql</span></span>
+<span class="giallo-l"><span>osmosis --read-pbf file=schleswig-holstein-latest.osm.pbf --bounding-box left=10.1141 right=10.3716 top=53.7136 bottom=53.6249 --write-pbf file=ahrensburg.pbf</span></span>
+<span class="giallo-l"><span>osm2pgsql -d thorsten -H localhost -U thorsten --create -G --hstore -W ahrensburg.pbf</span></span>
+<span class="giallo-l"></span></code></pre><h4 id="postgresql-passwort-authentifizierung-konfigurieren-nur-entwicklungsrechner">PostgreSQL Passwort-Authentifizierung konfigurieren nur Entwicklungsrechner</h4>
+<p>PostgreSQL Passwort-Authentifizierung konfigurieren
+Erstelle die .pgpass-Datei in deinem Home-Verzeichnis:</p>
+<pre class="giallo" style="color: #CDD6F4; background-color: #1E1E2E;" ><code data-lang="plain"><span class="giallo-l"><span>nano ~/.pgpass</span></span></code></pre>
+<p>Füge die Daten im folgenden Format ein:</p>
+<pre class="giallo" style="color: #CDD6F4; background-color: #1E1E2E;" ><code data-lang="plain"><span class="giallo-l"><span>localhost:5432:*:dein_user:dein_passwort</span></span></code></pre>
+<p>Setze die korrekten Berechtigungen:</p>
+<pre class="giallo" style="color: #CDD6F4; background-color: #1E1E2E;" ><code data-lang="plain"><span class="giallo-l"><span>chmod 0600 ~/.pgpass</span></span></code></pre><h2 id="nur-auf-dem-entwicklungsrechner-machen">Nur auf dem Entwicklungsrechner machen</h2>
+<h3 id="sudo-ohne-passwort-konfigurieren-nopasswd">Sudo ohne Passwort konfigurieren (NOPASSWD)</h3>
+<p>Öffnen Sie die Konfigurationsdatei mit:</p>
+<pre class="giallo" style="color: #CDD6F4; background-color: #1E1E2E;" ><code data-lang="plain"><span class="giallo-l"><span>sudo visudo</span></span></code></pre>
+<p>Fügen Sie am Ende der Datei folgende Zeile für Ihren Benutzer hinzu:</p>
+<pre class="giallo" style="color: #CDD6F4; background-color: #1E1E2E;" ><code data-lang="plain"><span class="giallo-l"><span>dein_benutzername ALL=(ALL) NOPASSWD:ALL</span></span></code></pre>
+<p>Speichern und schließen Sie den Editor.</p>
+<h2 id="google-chrome-installieren">Google Chrome installieren</h2>
+<pre class="giallo" style="color: #CDD6F4; background-color: #1E1E2E;" ><code data-lang="plain"><span class="giallo-l"><span>cd /tmp</span></span>
+<span class="giallo-l"><span>wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb</span></span>
+<span class="giallo-l"><span>sudo dpkg -i google-chrome-stable_current_amd64.deb</span></span></code></pre><h2 id="git-installieren-und-konfigurieren">Git installieren und konfigurieren</h2>
+<pre class="giallo" style="color: #CDD6F4; background-color: #1E1E2E;" ><code data-lang="plain"><span class="giallo-l"><span>sudo apt-get install git gh</span></span>
+<span class="giallo-l"><span>git config --global user.email &quot;you@example.com&quot;</span></span>
+<span class="giallo-l"><span>git config --global user.name &quot;Your Name&quot;</span></span></code></pre><h3 id="github-cli-gh-konfigurieren">GitHub CLI (gh) konfigurieren</h3>
+<pre class="giallo" style="color: #CDD6F4; background-color: #1E1E2E;" ><code data-lang="plain"><span class="giallo-l"><span>gh auth login</span></span></code></pre><h2 id="editoren-ides-installieren">Editoren &amp; IDEs installieren</h2>
+<h3 id="visual-studio-code-installieren">Visual Studio Code installieren</h3>
+<ul>
+<li><a rel="external" href="https://code.visualstudio.com/download">Visual Studio Code herunterladen</a></li>
+</ul>
+<h4 id="weitere-visual-studio-code-erweiterungen">Weitere Visual-Studio-Code-Erweiterungen</h4>
+<pre class="giallo" style="color: #CDD6F4; background-color: #1E1E2E;" ><code data-lang="plain"><span class="giallo-l"><span>code --install-extension rust-lang.rust-analyzer</span></span>
+<span class="giallo-l"><span>code --install-extension Google.google-antigravity</span></span>
+<span class="giallo-l"><span>code --install-extension anthropic.claude-code</span></span>
+<span class="giallo-l"><span>code --install-extension ms-dotnettools.csdevkit</span></span></code></pre><h3 id="neovim-installieren">Neovim installieren</h3>
+<pre class="giallo" style="color: #CDD6F4; background-color: #1E1E2E;" ><code data-lang="plain"><span class="giallo-l"><span>sudo apt-get install neovim</span></span></code></pre><h3 id="zed-installieren">Zed installieren</h3>
+<pre class="giallo" style="color: #CDD6F4; background-color: #1E1E2E;" ><code data-lang="plain"><span class="giallo-l"><span>curl -f https://zed.dev/install.sh | sh</span></span></code></pre><h2 id="coding-ki-tools-installieren">Coding-KI-Tools installieren</h2>
+<h3 id="coding-ki-clis-installieren">Coding-KI-CLIs installieren</h3>
+<pre class="giallo" style="color: #CDD6F4; background-color: #1E1E2E;" ><code data-lang="plain"><span class="giallo-l"><span>npm i -g @openai/codex</span></span>
+<span class="giallo-l"><span>curl -fsSL https://claude.ai/install.sh | bash</span></span>
+<span class="giallo-l"><span>curl -fsSL https://antigravity.google/cli/install.sh | bash</span></span>
+<span class="giallo-l"></span></code></pre><h2 id="windows-mit-wsl-2-und-ubuntu-26-10">Windows mit WSL 2 und Ubuntu 26.10</h2>
+<p>Leider habe ich keine Ahnung, wie das geht.</p>
+<h2 id="weiterfuhrende-links">Weiterführende Links</h2>
+<ul>
+<li><a rel="external" href="https://learn.microsoft.com/en-us/windows/wsl/install">WSL 2 installieren</a>: Anleitung von Microsoft für Windows mit Ubuntu.</li>
+<li><a rel="external" href="https://learn.microsoft.com/en-us/dotnet/core/install/linux-ubuntu-install">Installation von .NET unter Ubuntu</a>: Offizielle Anleitung zu .NET.</li>
+<li><a rel="external" href="https://rust-lang.org/tools/install/">Rust installieren</a>: Offizielle Seite zur Installation von Rust.</li>
+<li><a rel="external" href="https://go.dev/dl/">Go herunterladen</a>: Offizielle Downloadseite von Go.</li>
+<li><a rel="external" href="https://www.postgresql.org/download/linux/ubuntu/">PostgreSQL unter Ubuntu</a>: Offizielle Anleitung zu PostgreSQL.</li>
+<li><a rel="external" href="https://github.com/nvm-sh/nvm">nvm-Projektseite auf GitHub</a>: Erklärt Installation und Nutzung des Node-Versionsmanagers.</li>
+<li><a rel="external" href="https://code.claude.com/docs/en/overview">Claude-Code-Dokumentation</a>: Offizielle Anleitung zu Claude Code.</li>
+</ul>
+
+</main>
+  <script src="https://coding-ahrensburg.de/bootstrap/bootstrap.bundle.min.js"></script>
+</body>
+</html>
